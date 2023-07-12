@@ -1,5 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
-app-login{
-    background: #080710;
-height:100vh;
+html{
+    overflow: hidden;
+}
+
+*,
+*:before,
+*:after{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
 }
