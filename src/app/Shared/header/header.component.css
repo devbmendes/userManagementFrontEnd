@@ -1,0 +1,21 @@
+nav{
+   background:#021b3a!important;
+   border-left: 1px solid white;
+}
+
+.d-flex img{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right:15px;
+}
+
+
+.navbar-brand i{
+    color: white;
+    cursor: pointer;
+}
+
+.navbar-brand img{
+    width: 60px;
+}
