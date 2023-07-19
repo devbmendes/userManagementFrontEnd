@@ -26,6 +26,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HomeComponent,
     SidebarComponent,
     
+    
   ],
   imports: [
     BrowserModule,
@@ -35,7 +36,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatToolbarModule,
     MatMenuModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
