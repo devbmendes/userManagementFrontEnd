@@ -15,6 +15,7 @@ import { FooterComponent } from './Shared/footer/footer.component';
 import { HomeComponent } from './Pages/home/home.component';
 import { SidebarComponent } from './Shared/sidebar/sidebar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { UserCountComponent } from './user-count/user-count.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FooterComponent,
     HomeComponent,
     SidebarComponent,
+    UserCountComponent,
     
     
   ],
