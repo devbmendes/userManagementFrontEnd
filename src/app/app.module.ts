@@ -19,6 +19,8 @@ import { UserCountComponent } from './user-count/user-count.component';
 import { UserformComponent } from './Shared/userform/userform.component';
 import { AcessRoutingModule } from './acess/acess-routing.module';
 import { DashboardComponent } from './Pages/dashboard/dashboard.component';
+import { NewuserComponent } from './Pages/newuser/newuser.component';
+import { EdituserComponent } from './pages/edituser/edituser.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { DashboardComponent } from './Pages/dashboard/dashboard.component';
     SidebarComponent,
     UserCountComponent,
     UserformComponent,
-    DashboardComponent
+    DashboardComponent,
+    NewuserComponent,
+    EdituserComponent
   ],
   imports: [
     BrowserModule,
