@@ -1,7 +1,14 @@
 
 .logo{
-    text-align: center;
     padding: 2.6rem 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.logo span{
+    color: azure;
+    font-size: 2rem;
+    font-weight: 300;
 }
 .logo img{
     width: 50px;

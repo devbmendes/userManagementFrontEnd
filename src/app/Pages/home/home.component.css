@@ -1,19 +1,14 @@
-.page{
-    color: white;
-    padding: 0 1rem;
-    background: #f1f5f9;
+:host{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
-.page__box{
-    min-height: 120px;
-    background: #0e1f3b;
-    margin: 0 -1rem;
-    font-size: 36px;
+mat-drawer{
+    width: 300px;
+    background: #021b3a!important;
 }
-.page__content{
-    min-height: calc(100vh - 178px);
-    border-radius: 10px;
-    margin-top: -2rem;
-    background: white;
-    color: black;
+
+mat-drawer-container{
+    height: 100%;
 }

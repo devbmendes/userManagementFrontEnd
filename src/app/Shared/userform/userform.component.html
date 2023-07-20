@@ -1,0 +1,85 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">User List</h3>
+                </div>
+            
+                <div class="card-body">
+                    <table class="table table-bordered table-hover text-center">
+                        <thead>
+                            <tr>
+                                <th style="width: 10px">#</th>
+                                <th>Full Name</th>
+                                <th>Email</th>
+                                <th>User Type</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1.</td>
+                                <td>Elton JOhn</td>
+                                <td>eltjohn@gmail.com</td>
+                                <td>NORMAL_USER</td>
+                                <td class="action">
+                                    <mat-icon class="text-info" data-bs-toggle="modal" data-bs-target="#exampleModal">edit_note</mat-icon>
+                                    <mat-icon class="text-danger">delete</mat-icon>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2.</td>
+                                <td>Balduino Mendes</td>
+                                <td>baldhuino@gmail.com</td>
+                                <td>ADMIN_USER</td>
+                                <td>
+                                    <mat-icon>edit_note</mat-icon>
+                                    <mat-icon>delete</mat-icon>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3.</td>
+                                <td>Julio Cesar</td>
+                                <td>julio@gmail.com</td>
+                                <td>ADMIN_USER</td>
+                                <td>
+                                    <mat-icon>edit_note</mat-icon>
+                                    <mat-icon>delete</mat-icon>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            
+                <div class="card-footer clearfix">
+                    <ul class="pagination pagination-sm m-0 float-right">
+                        <li class="page-item"><a class="page-link" href="#">«</a></li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">»</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Edit User</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+

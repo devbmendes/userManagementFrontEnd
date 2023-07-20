@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+  sideBarOpen = true;
+  sideBarToogler(){
+    this.sideBarOpen = !this.sideBarOpen;
+  }
 
 }

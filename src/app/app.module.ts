@@ -8,7 +8,7 @@ import {MatListModule} from '@angular/material/list';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './Pages/login/login.component';
+import { LoginComponent } from './acess/login/login.component';
 import { RegisterComponent } from './Pages/register/register.component';
 import { HeaderComponent } from './Shared/header/header.component';
 import { FooterComponent } from './Shared/footer/footer.component';
@@ -16,6 +16,9 @@ import { HomeComponent } from './Pages/home/home.component';
 import { SidebarComponent } from './Shared/sidebar/sidebar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UserCountComponent } from './user-count/user-count.component';
+import { UserformComponent } from './Shared/userform/userform.component';
+import { AcessRoutingModule } from './acess/acess-routing.module';
+import { DashboardComponent } from './Pages/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -27,8 +30,8 @@ import { UserCountComponent } from './user-count/user-count.component';
     HomeComponent,
     SidebarComponent,
     UserCountComponent,
-    
-    
+    UserformComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +42,7 @@ import { UserCountComponent } from './user-count/user-count.component';
     MatMenuModule,
     MatIconModule,
     MatListModule,
+    AcessRoutingModule
 
     
   ],
