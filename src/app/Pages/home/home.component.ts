@@ -10,5 +10,4 @@ export class HomeComponent {
   sideBarToogler(){
     this.sideBarOpen = !this.sideBarOpen;
   }
-
 }

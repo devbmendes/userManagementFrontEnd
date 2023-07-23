@@ -1,0 +1,22 @@
+.title{
+margin-left: 12px;
+}
+
+#close-dialog{
+    position: absolute;
+    right: 28px;
+    top: 15px;
+    cursor: pointer;
+}
+.content{
+    padding-top: 10px;
+}
+
+.action{
+    padding: 0px 35px 20px;
+}
+
+.action button{
+    flex: 1;
+    height: 55px;
+}

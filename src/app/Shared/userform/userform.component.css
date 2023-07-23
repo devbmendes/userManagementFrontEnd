@@ -1,6 +1,3 @@
-.action mat-icon{
-    cursor: pointer;
-}
-.modal{
-    z-index: 1000!important;
+.action button:first-child{
+    margin-right: 7px;
 }

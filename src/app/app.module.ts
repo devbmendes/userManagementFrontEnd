@@ -5,6 +5,11 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatButtonModule} from '@angular/material/button';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,8 +24,7 @@ import { UserCountComponent } from './user-count/user-count.component';
 import { UserformComponent } from './Shared/userform/userform.component';
 import { AcessRoutingModule } from './acess/acess-routing.module';
 import { DashboardComponent } from './Pages/dashboard/dashboard.component';
-import { NewuserComponent } from './Pages/newuser/newuser.component';
-import { EdituserComponent } from './pages/edituser/edituser.component';
+import { NewUserEditComponent } from './Pages/new-user-edit/new-user-edit.component'
 
 @NgModule({
   declarations: [
@@ -34,8 +38,8 @@ import { EdituserComponent } from './pages/edituser/edituser.component';
     UserCountComponent,
     UserformComponent,
     DashboardComponent,
-    NewuserComponent,
-    EdituserComponent
+    NewUserEditComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -46,7 +50,11 @@ import { EdituserComponent } from './pages/edituser/edituser.component';
     MatMenuModule,
     MatIconModule,
     MatListModule,
-    AcessRoutingModule
+    MatDialogModule,
+    AcessRoutingModule,
+    MatButtonModule,
+    MatInputModule,
+    MatFormFieldModule
 
     
   ],

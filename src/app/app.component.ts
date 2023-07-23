@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-root',
@@ -6,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'UserM';
-  sideBarOpen = true;
+  title = 'User Management Application';
+
   constructor(){
 
   }
@@ -15,8 +16,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     
   }
+  
 
-  sideBarToogler(){
-    this.sideBarOpen = !this.sideBarOpen;
-  }
+  
 }
