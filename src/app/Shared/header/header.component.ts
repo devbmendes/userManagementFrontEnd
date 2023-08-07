@@ -6,15 +6,20 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+   email: string | null;
 
   @Output() tooglerSideBarForMe: EventEmitter<any> = new EventEmitter();
 
-  constructor(){}
+
+  constructor(){
+    this.email = '';
+  }
 
   ngOnInit(): void {
-    
+    this.email = localStorage.getItem('email');
   }
   tooglerSideBar(){
     this.tooglerSideBarForMe.emit();
   }
+  
 }

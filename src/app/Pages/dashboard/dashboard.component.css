@@ -8,12 +8,18 @@
     min-height: 120px;
     background: #0e1f3b;
     margin: 0 -1rem;
-    font-size: 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
 }
+
+
 .page__content{
-    min-height: calc(100vh - 178px);
+    min-height: auto;
     border-radius: 10px;
-    margin-top: -2rem;
+    margin-top: -7rem;
     background: white;
     color: black;
+    padding-bottom: 10px;
 }

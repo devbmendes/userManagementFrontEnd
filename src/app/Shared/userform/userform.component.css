@@ -1,3 +1,36 @@
-.action button:first-child{
-    margin-right: 7px;
-}
+
+table {
+    text-align: center;
+    width: 100%;
+  }
+  .search-add{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .search-add mat-form-field{
+    width: 55%;
+    position: relative;
+  }
+  .add button{height: 56px;}
+
+  .add button mat-icon{
+    font-weight: 600;
+    
+  }
+  .search-add .search{
+    position: absolute;
+    top: 18px;
+    left: 98%;
+    color: rgb(91, 78, 143);
+  }
+  .mat-mdc-table .mdc-data-table__row{
+    transition: all .2s ease-in;
+  }
+
+  .mat-mdc-table .mdc-data-table__row:hover{
+    background: rgb(239, 238, 238);
+  }
+  .mat-mdc-cell{font-weight: 100;}
+
+  td button{margin-right: 5px;}

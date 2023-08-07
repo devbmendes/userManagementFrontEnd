@@ -1,0 +1,19 @@
+mat-icon{
+    position:absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+.action{
+    display: flex!important;
+    width: 90%!important;
+    margin: 0 auto;
+}
+.action button{
+    width: 48%!important;
+    margin: 2px;
+}
+h1{
+    font-weight: 100!important;
+    background: #f44336;
+}

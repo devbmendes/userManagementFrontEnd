@@ -1,18 +1,24 @@
 <body class="black_bg">
-    <form>
+    <form [name]="loginRequest" (submit)="login()">
         <div class="img">
             <img src="../../../assets/lock.jpg" alt="">
         </div>
-        <div class="form-floating">
+        <!--<div class="form-floating">
             <input class="form-control" type="email" id="floatingInput" placeholder=" ">
             <label for="floatingInput">Email address</label>
-        </div>
-        <div class="form-floating">
-            <input type="password" class="form-control" id="floatingPassword" placeholder=" " >
-            <label for="floatingPassword">Password</label>
-        </div>
-        <a routerLink="../home" >
-            <button type="submit" class="btn_submit">Login</button>
-        </a>
+        </div -->
+        <mat-form-field appearance="outline" class="form-fld">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="" type="email" name="username" [(ngModel)]="loginRequest.email">
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="form-fld">
+            <mat-label>Password</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'" placeholder="" type="password" name="password" [(ngModel)]="loginRequest.password">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide">
+                <mat-icon >{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+        </mat-form-field>
+        <button type="submit" class="btn_submit" >Login</button>
     </form>
 </body>

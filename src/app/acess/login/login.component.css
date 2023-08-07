@@ -8,6 +8,7 @@ body{
     
     .img{
         text-align: center;
+        margin-bottom: 10px;
     }
     
     .img img{
@@ -26,27 +27,25 @@ body{
     padding: 50px 35px;margin: 0 auto;
     }
     form *{
-    font-family: 'Poppins',sans-serif;
     color: #ffffff;
     letter-spacing: 0.5px;
     outline: none!important;
     border: none;
     }
-    
-    input{
-    display: block!important;
-    height: 50px;
+
+    mat-form-field{
+    height: 56px;
     width: 100%;
     background-color: rgba(255,255,255,0.07)!important;
     border-radius: 3px;
-    padding: 0 10px;
     margin-top: 20px;
     font-size: 14px;
-    font-weight: 300;
     }
-    ::placeholder{
-    color: #e5e5e5!important;
-    }
+
+    mat-form-field input{color: white!important;background-color: transparent;}
+
+    mat-form-field input::selection{background-color: transparent!important;}
+
     .btn_submit{
     width: 100%;
     margin-top:20px;
@@ -54,7 +53,6 @@ body{
     color: #080710!important;
     padding: 11px 0;
     font-size: 18px;
-    font-weight: 600;
     border-radius: 5px;
     cursor: pointer;
     transition: all ease-in .3s;
@@ -65,12 +63,5 @@ body{
         color: #ffffff!important;
         border-color: #e5e5e5!important;
     }
-    input:focus {
-        outline-style: none!important;
-        box-shadow: none!important;
-        
-    }
-    label:focus{
-        background: transparent;
-    }
+  
     

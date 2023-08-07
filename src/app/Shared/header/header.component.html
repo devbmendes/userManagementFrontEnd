@@ -1,14 +1,4 @@
-<!--nav class="navbar bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand">
-        <i class="fa fa-bars"></i>
-      </a>
-      <div class="d-flex">
-        <img src="../../../assets/user.png"alt="">
-      </div>
-    </div>
-  </nav-->
-  <mat-toolbar>
+ <mat-toolbar>
     <mat-toolbar-row class="justify-content-between"> 
       <button mat-icon-button (click)="tooglerSideBar()">
       <mat-icon>menu</mat-icon>
@@ -17,12 +7,13 @@
       <ul>
         <li>
           <button mat-button class="user mt-2 d-flex align-items-center">
+            <span style="color: white;">
+              <small style="font-weight: 100;">{{email}}</small>
+            </span>
             <img class="user-image mr-1 p-2" src="../../../assets/user.png" alt="">
-            <span style="color: white;">User Name</span>
           </button>
           </li>
       </ul>
     </div>
     </mat-toolbar-row>
-
   </mat-toolbar>

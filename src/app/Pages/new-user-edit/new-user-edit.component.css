@@ -1,10 +1,7 @@
-.title{
-margin-left: 12px;
-}
 
 #close-dialog{
     position: absolute;
-    right: 28px;
+    right: 20px;
     top: 15px;
     cursor: pointer;
 }
@@ -13,10 +10,15 @@ margin-left: 12px;
 }
 
 .action{
-    padding: 0px 35px 20px;
+    display: flex;
+    align-content: space-between;
 }
 
 .action button{
-    flex: 1;
     height: 55px;
+    width: 50%;
+    margin:auto auto;
+}
+mat-form-field{
+    width: 100%;
 }

@@ -1,36 +1,48 @@
 <div mat-dialog-title>
     <h3 class="title">Add User</h3>
-    <div>
-        <mat-icon (click)="closeDialogComponent()" id="close-dialog">close</mat-icon>
-        <div mat-dialog-content class="content">
-            <form action="">
-                <div class="row">
-                    <div class="col-6">
-                        <mat-form-field appearance="outline">
-                            <mat-label>First Name</mat-label>
-                            <input matInput placeholder="First Name" type="text">
-                        </mat-form-field>
-                    </div>
-                    <div class="col-6">
-                        <mat-form-field appearance="outline">
-                            <mat-label>Last Name</mat-label>
-                            <input matInput placeholder="Last Name" type="text">
-                        </mat-form-field>
-                    </div>
-                </div>
-                <div class="row">
-                    <mat-form-field appearance="outline">
-                        <mat-label>Email</mat-label>
-                        <input matInput placeholder="example@email.com" type="email">
-                    </mat-form-field>
-                    <mat-form-field appearance="outline">
-                        <mat-label>Password</mat-label>
-                        <input matInput placeholder="" type="password">
-                    </mat-form-field>
-                </div>
-            </form>
+</div>
+<mat-icon mat-dialog-close id="close-dialog">close</mat-icon>
+<div mat-dialog-content class="content">
+    <form action="">
+        <div class="row">
+            <div class="col-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>First Name</mat-label>
+                    <input matInput placeholder="" type="text">
+                </mat-form-field>
+            </div>
+            <div class="col-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput placeholder="" type="text">
+                </mat-form-field>
+            </div>
         </div>
-        <div mat-dialog-actions class="action">
-            <button mat-raised-button (click)="closeDialogComponent()">Cancel</button>
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="" type="email">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>User Type</mat-label>
+                <mat-select>
+                    <mat-option *ngFor="let type of options" [value]="type">
+                        {{type}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Enter your password</mat-label>
+                <input matInput [type]="hide ? 'password' : 'text'" placeholder="">
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+            </mat-form-field>
+        </div>
+        <div class="action">
+            <button mat-raised-button mat-dialog-close>Cancel</button>
             <button mat-raised-button color="primary">Save</button>
         </div>
+    </form>
+</div>

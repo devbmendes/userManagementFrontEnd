@@ -5,9 +5,10 @@
     </div>
     <mat-divider></mat-divider>
     <h2 matSubheader class="mt-2">User Management</h2>
+    <a  routerLink="user" routerLinkActive='list-item-active'><mat-icon>people</mat-icon>Users </a>
+    <a  routerLink="book" routerLinkActive="list-item-active"><mat-icon>menu_book</mat-icon>Book Store </a>
+    <a  routerLink="" routerLinkActive="list-item-active"><mat-icon>notifications</mat-icon>Users </a>
     <a  routerLink="" routerLinkActive="list-item-active"><mat-icon>people</mat-icon>Users </a>
-    <a  routerLink="" routerLinkActive="list-item-active"><mat-icon>people</mat-icon>Users </a>
-    <a  routerLink="" routerLinkActive="list-item-active"><mat-icon>people</mat-icon>Users </a>
-    <a  routerLink="" routerLinkActive="list-item-active"><mat-icon>people</mat-icon>Users </a>
-    <a  routerLink="../login"><mat-icon>logout</mat-icon>Logout </a>
+    <a  routerLink="" (click)="logOut()"><mat-icon>logout</mat-icon>Logout </a>
 </mat-nav-list>|
+
