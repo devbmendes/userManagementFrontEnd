@@ -10,7 +10,7 @@
 }
 
 
-.action{width: 100%;}
+.action{width: 100%;display: flex;}
 .action button{
     height: 55px;
     flex: 1;

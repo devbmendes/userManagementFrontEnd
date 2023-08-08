@@ -3,37 +3,37 @@
 </div>
 <mat-icon mat-dialog-close id="close-dialog">close</mat-icon>
 <div mat-dialog-content class="content">
-    <form action="">
+    <form action="" [formGroup]="userForm" (ngSubmit)="saveUser()">
         <div class="row">
             <div class="col-6">
                 <mat-form-field appearance="outline">
                     <mat-label>First Name</mat-label>
-                    <input matInput placeholder="" type="text">
+                    <input matInput placeholder="" type="text" formControlName="firstName">
                 </mat-form-field>
             </div>
             <div class="col-6">
                 <mat-form-field appearance="outline">
                     <mat-label>Last Name</mat-label>
-                    <input matInput placeholder="" type="text">
+                    <input matInput placeholder="" type="text" formControlName="lastName">
                 </mat-form-field>
             </div>
         </div>
         <div class="row">
             <mat-form-field appearance="outline">
                 <mat-label>Email</mat-label>
-                <input matInput placeholder="" type="email">
+                <input matInput placeholder="" type="email" formControlName="email">
             </mat-form-field>
             <mat-form-field appearance="outline">
                 <mat-label>User Type</mat-label>
-                <mat-select>
-                    <mat-option *ngFor="let type of options" [value]="type">
+                <mat-select formControlName="role">
+                    <mat-option *ngFor="let type of options" [value]="type" >
                         {{type}}
                     </mat-option>
                 </mat-select>
             </mat-form-field>
             <mat-form-field appearance="outline">
                 <mat-label>Enter your password</mat-label>
-                <input matInput [type]="hide ? 'password' : 'text'" placeholder="">
+                <input matInput [type]="hide ? 'password' : 'text'" placeholder="" formControlName="password">
                 <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
                     [attr.aria-pressed]="hide">
                     <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
@@ -42,7 +42,7 @@
         </div>
         <div class="action">
             <button mat-raised-button mat-dialog-close>Cancel</button>
-            <button mat-raised-button color="primary">Save</button>
+            <button mat-raised-button color="primary" type="submit">Save</button>
         </div>
     </form>
 </div>

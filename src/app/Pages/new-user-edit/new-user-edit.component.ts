@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
+import { UserRegisterRequest } from 'src/app/model/UserRegisterRequest';
 import { User } from 'src/app/model/user';
 
 
@@ -12,25 +13,37 @@ import { User } from 'src/app/model/user';
 })
 export class NewUserEditComponent implements OnInit {
 
+  userForm : FormGroup;
+  userRequest: UserRegisterRequest ={
+    firstName:'',
+    lastName:'',
+    email:'',
+    password:'',
+    role:''
+};
+
   hide = true;
 
   myControl = new FormControl('');
-  options: string[] = ['ADMIN USER', 'NORMAL USER'];
+  options: string[] = ['ADMIN', 'USER'];
 
   ngOnInit():void{}
 
-  constructor(private _dialog: MatDialog){}
+  constructor(private _dialog: MatDialog,private _fb:FormBuilder){
+    this.userForm = this._fb.group(this.userRequest
+    )
+  }
 
   selectType(type:string){
     console.log(type);
   }
-  closeDialogComponent(){
-    this._dialog.closeAll();
+
+  saveUser(){
+    console.log(this.userForm.value)
   }
 
-  saveUser(data:User){
-    console.log(data);
-
+  closeDialogComponent(){
+    this._dialog.closeAll();
   }
 
 }
