@@ -9,15 +9,11 @@
     padding-top: 10px;
 }
 
-.action{
-    display: flex;
-    align-content: space-between;
-}
 
+.action{width: 100%;}
 .action button{
     height: 55px;
-    width: 50%;
-    margin:auto auto;
+    flex: 1;
 }
 mat-form-field{
     width: 100%;
