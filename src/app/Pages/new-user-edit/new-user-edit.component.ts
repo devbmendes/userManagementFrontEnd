@@ -3,6 +3,7 @@ import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { UserRegisterRequest } from 'src/app/model/UserRegisterRequest';
 import { User } from 'src/app/model/user';
+import { AuthService } from 'src/app/service/auth.service';
 
 
 
@@ -12,6 +13,8 @@ import { User } from 'src/app/model/user';
   styleUrls: ['./new-user-edit.component.css']
 })
 export class NewUserEditComponent implements OnInit {
+
+  userResponse:any;
 
   userForm : FormGroup;
   userRequest: UserRegisterRequest ={
@@ -29,9 +32,14 @@ export class NewUserEditComponent implements OnInit {
 
   ngOnInit():void{}
 
-  constructor(private _dialog: MatDialog,private _fb:FormBuilder){
-    this.userForm = this._fb.group(this.userRequest
-    )
+  constructor(private _dialog: MatDialog,private _fb:FormBuilder, private _auth: AuthService){
+    this.userForm = this._fb.group({
+    firstName:'',
+    lastName:'',
+    email:'',
+    password:'',
+    role:''
+    });
   }
 
   selectType(type:string){
@@ -39,7 +47,16 @@ export class NewUserEditComponent implements OnInit {
   }
 
   saveUser(){
-    console.log(this.userForm.value)
+    this._auth.saveUser(this.userForm.value).subscribe({
+      next:(data:any)=>{
+        this.userResponse = data
+        console.log(data)
+      },
+      error:(error)=>{
+        console.log(error.errors)
+      }
+    })
+  
   }
 
   closeDialogComponent(){
