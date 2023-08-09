@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { UserRegisterRequest } from 'src/app/model/UserRegisterRequest';
-import { User } from 'src/app/model/user';
+import { User } from 'src/app/model/user'; 
 import { AuthService } from 'src/app/service/auth.service';
 
 
@@ -15,6 +15,7 @@ import { AuthService } from 'src/app/service/auth.service';
 export class NewUserEditComponent implements OnInit {
 
   userResponse:any;
+  errors:any = [];
 
   userForm : FormGroup;
   userRequest: UserRegisterRequest ={
@@ -32,14 +33,8 @@ export class NewUserEditComponent implements OnInit {
 
   ngOnInit():void{}
 
-  constructor(private _dialog: MatDialog,private _fb:FormBuilder, private _auth: AuthService){
-    this.userForm = this._fb.group({
-    firstName:'',
-    lastName:'',
-    email:'',
-    password:'',
-    role:''
-    });
+  constructor(private _dialogRef: MatDialogRef<NewUserEditComponent>,private _fb:FormBuilder, private _auth: AuthService){
+    this.userForm = this._fb.group(this.userRequest);
   }
 
   selectType(type:string){
@@ -51,16 +46,15 @@ export class NewUserEditComponent implements OnInit {
       next:(data:any)=>{
         this.userResponse = data
         console.log(data)
+        this._dialogRef.close();
+
       },
       error:(error)=>{
-        console.log(error.errors)
+        this.errors = error;
+        console.log(this.errors.error.errors)
       }
     })
   
-  }
-
-  closeDialogComponent(){
-    this._dialog.closeAll();
   }
 
 }

@@ -25,7 +25,6 @@ export class UserformComponent implements OnInit {
         this.dataSource = new MatTableDataSource(this.users);
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
-        console.log(this.users)
     },error:(error)=>{
       console.log(error)
     }});
@@ -41,6 +40,9 @@ export class UserformComponent implements OnInit {
   constructor(private _dialog: MatDialog, private _authService: AuthService){}
 
   ngOnInit(): void{
+    this._authService.refreshNeeded$.subscribe(()=>{
+      this.getAllUser();
+    });
     this.getAllUser();
   }
 
