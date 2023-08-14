@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, OnInit } from '@angular/core';
 import{HttpClientModule,HTTP_INTERCEPTORS} from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -96,4 +96,11 @@ import { BookComponent } from './Pages/book/book.component';
   providers: [{provide:HTTP_INTERCEPTORS,useClass:TokenInterceptorService,multi:true}],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule implements OnInit { 
+
+  ngOnInit(){}
+  
+  ngOnDestroy():void{
+    localStorage.clear();
+  }
+}

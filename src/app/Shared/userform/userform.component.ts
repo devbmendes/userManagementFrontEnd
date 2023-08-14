@@ -15,8 +15,7 @@ import { AuthService } from 'src/app/service/auth.service';
 })
 export class UserformComponent implements OnInit {
 
-  users:any=[];
-
+  users:User[]=[];
   
   getAllUser(){
     this._authService.getAllUser().subscribe(

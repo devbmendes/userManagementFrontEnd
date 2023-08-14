@@ -44,7 +44,7 @@ export class LoginComponent implements OnInit {
       localStorage.setItem('token',response.token as string);
       localStorage.setItem('role',response.role as string);
 
-      this.router.navigate(['/home']);
+      this.router.navigate(['/home/user']);
     },error:(error)=>{
       console.log(error);
       this.openSnackBar(error);
